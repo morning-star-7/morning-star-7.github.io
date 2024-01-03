@@ -3799,9 +3799,58 @@ for Topologically Varying Neural Radiance Fields</span>
                 <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a>
               </td>
             </tr>
+
+            <tr onmouseout="robot_stop()" onmouseover="robot_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='smerf_image'><video  width=100% muted autoplay loop>
+                  <source src="images/robot_manipulation.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/smerf.jpg' width=100%>
+                </div>
+                <script type="text/javascript">
+                  function robot_start() {
+                    document.getElementById('smerf_image').style.opacity = "1";
+                  }
+        
+                  function robot_stop() {
+                    document.getElementById('smerf_image').style.opacity = "0";
+                  }
+                  robot_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://smerf-3d.github.io/">
+                  <span class="papertitle">A fast-speed vision-language intelligent manipulation system</span>
+                </a>
+                <br>
+            <a href="http://www.stronglyconvex.com/about.html">Daniel Duckworth*</a>,
+            <a href="https://phogzone.com/">Peter Hedman*</a>,
+            <a href="https://creiser.github.io/">Christian Reiser</a>,
+            <a href="">Peter Zhizhin</a>,
+            <a href="">Jean-François Thibert</a>,
+                <a href="https://lucic.ai/">Mario Lučić</a>,
+                <a href="https://szeliski.org/">Richard Szeliski</a>,
+            <strong>Jonathan T. Barron</strong>
+                <br>
+                <em>arXiv</em>, 2023
+                <br>
+                <a href="https://smerf-3d.github.io/">project page</a>
+                /
+                <a href="https://www.youtube.com/watch?v=zhO8iUBpnCc">video</a>
+                /
+                <a href="https://arxiv.org/abs/2312.07541">arXiv</a>
+                <p></p>
+                <p>
+                Distilling a Zip-NeRF into a tiled set of MERFs lets you fly through radiance fields on laptops and smartphones at 60 FPS.
+                </p>
+              </td>
+            </tr>
+
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/cs188.jpg" alt="cs188">
+                <img src="images/real world learning.png" alt="real world learning">
               </td>
               <td width="75%" valign="center">
                 <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
@@ -3815,7 +3864,7 @@ for Topologically Varying Neural Radiance Fields</span>
 
             <tr>
               <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <h2>Basically <br> Blog Posts</h2>
+                <img src="images/visual planning.png" alt="visual planning">
               </td>
               <td width="75%" valign="middle">
                 <a href="https://arxiv.org/abs/2112.11687">Squareplus: A Softplus-Like Algebraic Rectifier</a>
