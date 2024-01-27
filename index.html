@@ -3867,9 +3867,30 @@ for Topologically Varying Neural Radiance Fields</span>
             </tr>
             
 
-            <tr>
+
+
+            
+            <tr onmouseout="legged_nvg_stop()" onmouseover="legged_nvg_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='real world learning'><video  width="350" height="240" muted autoplay loop>
+                  <source src="images/legged_nvg.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/visual planning.png' width="320" height="160">
+                </div>
+                <script type="text/javascript">
+                  function legged_nvg_start() {
+                    document.getElementById('visual planning').style.opacity = "1";
+                  }
+        
+                  function legged_nvg_stop() {
+                    document.getElementById('visual planning').style.opacity = "0";
+                  }
+                  legged_nvg_stop()
+                </script>
+              </td>
               <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/visual planning.png" alt="visual planning" width="320" height="160">
                 <td style="padding:20px;width:75%;vertical-align:middle">
                   <span class="papertitle">Visual planning for legged robots</span>
                 <br>
