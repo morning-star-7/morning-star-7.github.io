@@ -3826,7 +3826,7 @@ for Topologically Varying Neural Radiance Fields</span>
 
 
 
-            <tr onmouseout="legged_stop()" onmouseover="legged_start()">
+            <!-- <tr onmouseout="legged_stop()" onmouseover="legged_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='real world learning'><video  width="350" height="240" muted autoplay loop>
@@ -3892,6 +3892,107 @@ for Topologically Varying Neural Radiance Fields</span>
               </td>
               <td align="center" style="padding:20px;width:25%;vertical-align:middle"></td>
               <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Visual planning for legged robots</span>
+                <br>
+                <p>
+                  (1) Leverage the strong image understanding and high-level planning ability of large multimodal
+                  models (like GPT4-Vision), enabling legged robots to accomplish multi-step and complex tasks,
+                  such as sending packages, and going out to find an object.
+                </p>
+              </td>
+            </tr> -->
+
+
+            <tr onmouseout="robot_stop()" onmouseover="robot_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='robot_image'><video  width="350" height="240" muted autoplay loop>
+                  <source src="images/robot_manipulation.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/robot.png' width="320" height="213">
+                </div>
+                <script type="text/javascript">
+                  function robot_start() {
+                    document.getElementById('robot_image').style.opacity = "1";
+                  }
+        
+                  function robot_stop() {
+                    document.getElementById('robot_image').style.opacity = "0";
+                  }
+                  robot_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">A fast-speed vision-language intelligent manipulation system</span>
+                <br>
+                <p>
+                  (1) Build a fast-speed vision-language manipulation deployment system to accomplish a variety of tasks based on Franka Panda Robot, including multi-language voice control, camera calibration, and automatic data collection.
+                </p>
+                <p>
+                  (2) Enable robust remote control with low latency. The computationally heavy inference process is calculated on a remote server and the actions are executed in real-time local client.
+                </p>
+                <p>
+                  (3) Fine-tune the vision-language manipulation model (CLIPORT) using data collected from real world and optimize the inference time from 40s to 8s, achieving a success rate of 90% in real-world experiments.
+                </p>
+              </td>
+            </tr>
+
+
+
+
+
+
+
+            <tr onmouseout="robot_stop()" onmouseover="robot_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='real world learning'><video  width="350" height="240" muted autoplay loop>
+                  <source src="images/legged_forward.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/real world learning.png' width="320" height="213">
+                </div>
+                <script type="text/javascript">
+                  function robot_start() {
+                    document.getElementById('real world learning').style.opacity = "1";
+                  }
+        
+                  function robot_stop() {
+                    document.getElementById('real world learning').style.opacity = "0";
+                  }
+                  robot_stop()
+                </script>
+              </td>
+              <tr>
+                <!-- <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/real world learning.png" alt="real world learning" width="320" height="185">
+                </td> -->
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Legged robots learn from physical world</span>
+                <br>
+                <p>
+                  (1) Establish a sim2real locomotion deployment codebase for legged robots. The policy is trained in
+                  the IsaacGym simulator and directly deployed on the Unitree Go1 robot.
+                </p>
+                <p>
+                  (2) Build a real-world learning framework which collects data in real world and trains the policy
+                  model in a remote server, making it possible to improve iteratively. Additionally, a reset policy is
+                  learned to automatically recover from falls.
+                </p>
+                <p>
+                  (3) Design and deploy a simple yet effective reward function, where all the reward terms are acquired
+                  from the robot itself without extra sensors, accompanied by fractal noise terrain. The linear and
+                  angular velocities are estimated by integrating IMU data with the Kalman filter.
+                </p>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/visual planning.png" alt="visual planning" width="320" height="160">
+                <td style="padding:20px;width:75%;vertical-align:middle">
                   <span class="papertitle">Visual planning for legged robots</span>
                 <br>
                 <p>
