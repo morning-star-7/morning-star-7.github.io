@@ -3826,7 +3826,7 @@ for Topologically Varying Neural Radiance Fields</span>
 
 
 
-            <tr onmouseout="robot_stop()" onmouseover="robot_start()">
+            <tr onmouseout="legged_stop()" onmouseover="legged_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='real world learning'><video  width="350" height="240" muted autoplay loop>
@@ -3836,14 +3836,14 @@ for Topologically Varying Neural Radiance Fields</span>
                   <img src='images/real world learning.png' width="320" height="213">
                 </div>
                 <script type="text/javascript">
-                  function robot_start() {
+                  function legged_start() {
                     document.getElementById('real world learning').style.opacity = "1";
                   }
         
-                  function robot_stop() {
+                  function legged_stop() {
                     document.getElementById('real world learning').style.opacity = "0";
                   }
-                  robot_stop()
+                  legged_stop()
                 </script>
               </td>
               <tr>
