@@ -156,13 +156,13 @@
                   <span class="papertitle">A fast-speed vision-language intelligent manipulation system</span>
                 <br>
                 <p>
-                  (1) Build a fast-speed vision-language manipulation deployment system to accomplish a variety of tasks based on Franka Panda Robot, including multi-language voice control, camera calibration, and automatic data collection.
+                  (1) Build a fast-speed vision-language manipulation deployment system to accomplish a variety of tasks based on Franka Panda Robot.
                 </p>
                 <p>
-                  (2) Enable robust remote control with low latency. The computationally heavy inference process is calculated on a remote server and the actions are executed in real-time local client.
+                  (2) Enable robust remote control with low latency.
                 </p>
                 <p>
-                  (3) Fine-tune the vision-language manipulation model (CLIPORT) using data collected from real world and optimize the inference time from 40s to 8s, achieving a success rate of 90% in real-world experiments.
+                  (3) Fine-tune the vision-language manipulation model(CLIPORT), achieving 90% success rate in real-world experiments.
                 </p>
               </td>
             </tr>
@@ -197,18 +197,15 @@
                   <span class="papertitle">Legged robots learn from physical world</span>
                 <br>
                 <p>
-                  (1) Establish a sim2real locomotion deployment codebase for legged robots. The policy is trained in
-                  the IsaacGym simulator and directly deployed on the Unitree Go1 robot.
+                  (1) Establish a sim2real locomotion deployment codebase for legged robots.
                 </p>
                 <p>
                   (2) Build a real-world learning framework which collects data in real world and trains the policy
-                  model in a remote server, making it possible to improve iteratively. Additionally, a reset policy is
-                  learned to automatically recover from falls.
+                  model in a remote server.
                 </p>
                 <p>
                   (3) Design and deploy a simple yet effective reward function, where all the reward terms are acquired
-                  from the robot itself without extra sensors, accompanied by fractal noise terrain. The linear and
-                  angular velocities are estimated by integrating IMU data with the Kalman filter.
+                  from the robot itself without extra sensors.
                 </p>
               </td>
             </tr> 
@@ -240,8 +237,8 @@
                   <span class="papertitle">Visual planning for legged robots</span>
                 <br>
                 <p>
-                  (1) Leverage the strong image understanding and high-level planning ability of large multimodal
-                  models (like GPT4-Vision), enabling legged robots to accomplish multi-step and complex tasks,
+                  (1) Leverage the strong image understanding and high-level planning ability of <strong>large multimodal
+                  models</strong>strong>(like GPT4-Vision), enabling legged robots to accomplish multi-step and complex tasks,
                   such as sending packages, and going out to find an object.
                 </p>
               </td>
