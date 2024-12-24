@@ -176,7 +176,7 @@
             <tr onmouseout="legged_stop()" onmouseover="legged_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='real world learning'><video  width="320" height="240" muted autoplay loop>
+                  <div class="two" id='real_world_learning'><video  width="320" height="180" muted autoplay loop>
                   <source src="images/legged_est_new.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video></div>
@@ -184,11 +184,11 @@
                 </div>
                 <script type="text/javascript">
                   function legged_start() {
-                    document.getElementById('real world learning').style.opacity = "1";
+                    document.getElementById('real_world_learning').style.opacity = "1";
                   }
         
                   function legged_stop() {
-                    document.getElementById('real world learning').style.opacity = "0";
+                    document.getElementById('real_world_learning').style.opacity = "0";
                   }
                   legged_stop()
                 </script>
@@ -238,7 +238,7 @@
                 <br>
                 <p>
                   (1) Leverage the strong image understanding and high-level planning ability of <strong>large multimodal
-                  models</strong>strong>(like GPT4-Vision), enabling legged robots to accomplish multi-step and complex tasks,
+                  models</strong>(like GPT4-Vision), enabling legged robots to accomplish multi-step and complex tasks,
                   such as sending packages, and going out to find an object.
                 </p>
               </td>
@@ -246,7 +246,7 @@
 
             
 
-            <tr>
+            <!-- <tr>
               <td align="center" style="padding:20px;width:25%;vertical-align:middle">
                 <img src="images/FDP.png" alt="foundation policy model" width="320" height="160">
                 <td style="padding:20px;width:75%;vertical-align:middle">
@@ -262,7 +262,7 @@
                   (3) Training and inference use action-aware sequence data instead of MDP.
                 </p>
               </td>
-            </tr>
+            </tr> -->
 
             
           </tbody></table>
