@@ -143,14 +143,14 @@
           </tbody></table>
 
           
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
             <tr>
               <td>
                 <h2>Research projects</h2>
               </td>
             </tr>
           </tbody></table>
-          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          <table width="100%" align="center" border="0" cellpadding="20"><tbody> -->
             
 
 
@@ -289,6 +289,82 @@
                 </p>
               </td>
             </tr> -->
+
+
+
+
+            <!-- 放到 <head> 中，或你的全局样式表 -->
+            <style>
+              /* 跟模板一致的基础样式 */
+              .one {
+                position: relative;
+                width: 320px;    /* 和你的图片尺寸一致 */
+                height: 160px;   /* 和你的图片尺寸一致 */
+                overflow: hidden;
+              }
+              .two {
+                position: absolute;
+                inset: 0;        /* 覆盖整个容器 */
+                z-index: 2;      /* 视频在上层 */
+                opacity: 0;      /* 初始隐藏，hover/JS 显示 */
+              }
+              .two video {
+                width: 100%;
+                height: 100%;
+                /* 如果你的视频是正方形且想铺满：用 fill 会拉伸完全覆盖；用 cover 会等比裁切 */
+                object-fit: fill;  /* 可改成 cover 看效果喜好 */
+              }
+              .one img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* 图片等比铺满 */
+                z-index: 1;        /* 图片在下层 */
+                display: block;
+              }
+            </style>
+
+            <tr onmouseout="nvg_stop()" onmouseover="nvg_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id="visual-planning">
+                    <video width="100%" height="100%" muted autoplay loop playsinline>
+                      <source src="images/move2chair_tp.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <img src="images/visual-planning.png" width="320" height="160" alt="Visual Planning" />
+                </div>
+
+                <script>
+                  function nvg_start() {
+                    document.getElementById('visual-planning').style.opacity = '1';
+                  }
+                  function nvg_stop() {
+                    document.getElementById('visual-planning').style.opacity = '0';
+                  }
+                  nvg_stop(); // 初始隐藏视频层
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">Visual planning for legged robots</span>
+                <br />
+                <p>
+                  (1) Leverage the strong image understanding and high-level planning ability of
+                  <strong>large multimodal models</strong> (like GPT4o), enabling legged robots to accomplish
+                  multi-step and complex tasks, such as sending packages, and going out to find an object.
+                </p>
+              </td>
+            </tr>
+
+
+
+
+
+
+
+
 
 
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
