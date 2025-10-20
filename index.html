@@ -266,9 +266,9 @@
               /* 左侧媒体容器 */
               .one {
                 position: relative;
-                width: 320px;
-                height: 160px;
-                overflow: hidden;        /* 防止视频溢出盖住右侧文字 */
+                width: 320px;       /* 图片宽度 */
+                height: 160px;      /* 图片高度 */
+                overflow: hidden;   /* 防止视频溢出 */
                 display: inline-block;
                 vertical-align: middle;
               }
@@ -276,20 +276,20 @@
               /* 覆盖层（视频层） */
               .two {
                 position: absolute;
-                inset: 0;                /* 等价于 top/right/bottom/left = 0 */
-                opacity: 0;              /* 初始隐藏 */
+                inset: 0;
+                opacity: 0;
                 transition: opacity 0.3s ease;
-                pointer-events: none;    /* 防止闪烁或鼠标事件抢占 */
-                z-index: 1;              /* 确保只覆盖图片，不盖文字 */
+                pointer-events: none;
+                z-index: 1;
               }
 
-              /* 视频和图片统一填充方式 */
+              /* 让视频和图片完全填满容器 */
               .two video,
               .one img {
                 display: block;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: cover;   /* 保持比例裁剪填充 */
               }
             </style>
 
@@ -297,30 +297,28 @@
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id="visual-planning">
+                    <!-- 注意：去掉 video 的 width/height 属性，让 CSS 接管尺寸 -->
                     <video muted autoplay loop playsinline>
                       <source src="images/move2chair_tp.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
                   </div>
-                  <img src="images/visual-planning.png" width="320" height="160" alt="visual planning">
+                  <img src="images/visual-planning.png" alt="visual planning">
                 </div>
 
                 <script>
                   function nvg_start() {
                     document.getElementById('visual-planning').style.opacity = '1';
                   }
-
                   function nvg_stop() {
                     document.getElementById('visual-planning').style.opacity = '0';
                   }
-
-                  nvg_stop(); // 初始化为隐藏状态
+                  nvg_stop();
                 </script>
               </td>
 
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle">Visual planning for legged robots</span>
-                <br>
                 <p>
                   (1) Leverage the strong image understanding and high-level planning ability of
                   <strong>large multimodal models</strong> (like GPT4o), enabling legged robots to
@@ -329,6 +327,7 @@
                 </p>
               </td>
             </tr>
+
 
             
             <!-- <tr>
