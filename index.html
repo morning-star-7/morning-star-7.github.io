@@ -266,30 +266,34 @@
               /* 左侧媒体容器 */
               .one {
                 position: relative;
-                width: 320px;       /* 图片宽度 */
-                height: 160px;      /* 图片高度 */
-                overflow: hidden;   /* 防止视频溢出 */
+                width: 320px;          /* 和图片相同 */
+                height: 160px;         /* 和图片相同 */
+                overflow: hidden;
                 display: inline-block;
                 vertical-align: middle;
               }
 
-              /* 覆盖层（视频层） */
+              /* 覆盖层（视频） */
               .two {
                 position: absolute;
-                inset: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
                 opacity: 0;
                 transition: opacity 0.3s ease;
                 pointer-events: none;
                 z-index: 1;
               }
 
-              /* 让视频和图片完全填满容器 */
-              .two video,
-              .one img {
-                display: block;
+              /* 视频与图片都铺满容器 */
+              .one img,
+              .two video {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;   /* 保持比例裁剪填充 */
+                display: block;
+                object-fit: cover;      /* 按比例填充，不变形 */
+                aspect-ratio: 2 / 1;    /* 强制维持 320:160 比例 */
               }
             </style>
 
@@ -297,7 +301,7 @@
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id="visual-planning">
-                    <!-- 注意：去掉 video 的 width/height 属性，让 CSS 接管尺寸 -->
+                    <!-- 注意：不要在 video 标签上写 width / height 属性 -->
                     <video muted autoplay loop playsinline>
                       <source src="images/move2chair_tp.mp4" type="video/mp4">
                       Your browser does not support the video tag.
